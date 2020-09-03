@@ -1,9 +1,9 @@
 import React from "react"
-import { LocationList } from "./location/LocationList"
-import { LocationProvider } from "./location/LocationProvider"
+import { LocationList } from "./components/location/LocationList"
+import { LocationProvider } from "./components/location/LocationProvider"
 import "./KandyKorner.css"
 
-export const Kennel = () => (
+export const KandyKorner = () => (
     <>
         <h2>Kandy Korner</h2>
         <small>When your morning coffee just isn't enough.</small>

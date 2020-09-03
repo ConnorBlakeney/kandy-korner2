@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react"
 import { LocationContext } from "./LocationProvider"
 import { Location } from "./Location"
-import "./Locations.css"
+import "./Location.css"
 
 export const LocationList = () => {
     // This state changes when `getLocations()` is invoked below
@@ -29,8 +29,13 @@ export const LocationList = () => {
     return (
         <div className="locations">
         {
-            locations.map(loc => <Location key={loc.id} location={loc} />)
-        }
+                locations.map(location => {
+                    return <section key={location.id} className="location">
+                        <div><h3>{location.name}</h3></div>
+                        <div>{location.address}</div>
+                    </section>
+                })
+            }
         </div>
     )
 }
