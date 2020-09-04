@@ -5,6 +5,8 @@ import { LocationProvider } from "./location/LocationProvider"
 import { ProductProvider } from "./product/ProductProvider";
 import { ProductTypeProvider } from "./product/ProductTypeProvider";
 import { ProductList } from "./product/ProductList";
+import { EmployeeProvider } from "./employee/EmployeeProvider";
+import { EmployeeList } from "./employee/EmployeeList";
 import "./KandyKorner.css"
 
 export const ApplicationViews = (props) => {
@@ -28,6 +30,15 @@ export const ApplicationViews = (props) => {
                 </Route>
             </ProductTypeProvider>
         </ProductProvider>
+
+        <h2>Employees</h2>
+        <EmployeeProvider>
+            <LocationProvider>
+                <Route path="/employees">
+                    <EmployeeList />
+                </Route>
+            </LocationProvider>
+        </EmployeeProvider>
     </>
 )
 }
