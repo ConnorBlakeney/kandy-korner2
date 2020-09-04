@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react"
 import { ProductContext } from "./ProductProvider"
 import { ProductTypeContext } from "./ProductTypeProvider";
 import "./Product.css"
+import { Product } from "./Product";
 
 export const ProductList = () => {
     // This state changes when `getProducts()` is invoked below
@@ -29,11 +30,8 @@ export const ProductList = () => {
                 products.map(product => {
 
                     const candyType = productTypes.find(productType => product.productTypeId === productType.id) || 1
-                    return <section key={product.id} className="product">
-                        <div><h3>{product.name}</h3></div>
-                        <div>Price: ${product.price}</div>
-                        <div>Candy Type: {candyType.name}</div>
-                    </section>
+                    const productType = productTypes.find(productType => product.productTypeId === productType.id) || 1
+                    return <Product key="product.id" product={product} productType={productType} candyType={candyType}/>
                 })
             }
         </div>

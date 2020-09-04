@@ -1,9 +1,10 @@
 import React from "react"
-import "./Location.css"
+import "./Product.css"
 
-export const Location = ({ location }) => (
-    <section className="location">
-        <h3><div className="location__name">{location}</div></h3>
-            <address className="location__address">{location.address}</address>
+export const Product = ({ product, productType }) => (
+    <section className="product">
+        <h3><div className="product__name">{product.name}</div></h3>
+            <address className="product__price">Price: {product.price}</address>
+            <address className="productType__name">Candy Type: {productType.name}</address>
     </section>
 )
