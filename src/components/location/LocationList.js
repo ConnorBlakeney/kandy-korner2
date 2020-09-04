@@ -20,11 +20,7 @@ export const LocationList = () => {
         This effect is solely for learning purposes. The effect
         it is responding to is that the location state changed.
     */
-    useEffect(() => {
-        console.log("LocationList: Location state changed")
-        console.log(locations)
-    }, [locations])
-
+ 
     return (
         <div className="locations">
         {
